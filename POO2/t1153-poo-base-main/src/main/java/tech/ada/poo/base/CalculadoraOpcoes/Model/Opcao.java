@@ -7,16 +7,19 @@ public class Opcao {
 private Long id;
 Double  Spot;
 Double  Strike;
-Date    Prazo;
+Double Prazo;
+String  Vencimento;
+String  DataReferencia;
 Double  TaxaDeJuros;
 Double  Volatilidade;
 Double  Dividendos;
 String  TipoDaOpcao; // Direito ;
 String  Nome;
+int NrPassosSimular;
 
 Double precoOpcao;
 
-public Opcao(Double Spot, Double Strike, Date Prazo, Double TaxaDeJuros,
+public Opcao(Double Spot, Double Strike, Double Prazo, Double TaxaDeJuros,
                       Double Volatilidade, Double Dividendos, String TipoDaOpcao, String Nome)
     {
         this.Spot = Spot;
@@ -38,7 +41,7 @@ public void setStrike (Double Strike) {
         this.Strike = Strike;
 }
 
-public void setPrazo (Date Prazo) {
+public void setPrazo (double Prazo) {
         this.Prazo = Prazo;
 }
 
@@ -54,7 +57,43 @@ public void setdividendos (Double dividendos) {
         this.Dividendos = Dividendos;
 }
 
-public void setTipoDaOpcao (String TipoDaOpcao) {
+    public String getVencimento() {
+        return Vencimento;
+    }
+
+    public void setVencimento(String vencimento) {
+        Vencimento = vencimento;
+    }
+
+    public String getDataReferencia() {
+        return DataReferencia;
+    }
+
+    public void setDataReferencia(String dataReferencia) {
+        DataReferencia = dataReferencia;
+    }
+
+    public Double getDividendos() {
+        return Dividendos;
+    }
+
+    public void setDividendos(Double dividendos) {
+        Dividendos = dividendos;
+    }
+
+    public Double getPrecoOpcao() {
+        return precoOpcao;
+    }
+
+    public void setPrecoOpcao(Double precoOpcao) {
+        this.precoOpcao = precoOpcao;
+    }
+
+    public void setNrPassosSimular(int nrPassosSimular) {
+        this.NrPassosSimular = nrPassosSimular;
+    }
+
+    public void setTipoDaOpcao (String TipoDaOpcao) {
         this.TipoDaOpcao = TipoDaOpcao;
 }
 
@@ -72,7 +111,7 @@ public Double getStrike()  {
         return Strike;
 }
 
-public Date getPrazo() {
+public double getPrazo() {
         return Prazo;
 }
 
@@ -96,6 +135,9 @@ public String getNome () {
         return Nome;
 }
 
+public int getNrPassosSimular() {
+        return NrPassosSimular;
+    }
 public Long getId() {
     return id;
 }
@@ -119,9 +161,11 @@ public boolean equals(Object obj) {
             return (this.getId().equals(produto.getId()));
         }
 
-        public boolean isNomeValido() {
-            return (this.getNome() != null || !this.getNome().isEmpty());
-        }
+public boolean isNomeValido() {
+      return (this.getNome() != null || !this.getNome().isEmpty());
+}
 
 }
+
+
 
