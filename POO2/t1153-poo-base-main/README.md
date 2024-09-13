@@ -27,7 +27,7 @@ Também conhecido como Black-Scholes-Merton, Black-Scholes foi o primeiro modelo
 
 Ele é utilizado para calcular o valor teórico das opções usando uma série de variáveis, como os preços atuais das ações, preço de exercício da opção, dividendos esperados, taxas de juros projetadas, tempo de expiração e volatilidade esperada.
 
-![Video Explicativo do Mercado Opções](https://youtu.be/YHajyECUkUU)
+![Video Explicativo do Mercado Opções]('https://www.youtube.com/watch?v=YHajyECUkUU')
 
 
 ## II - COMO FUNCIONA O BLACK SHOLES ?  
